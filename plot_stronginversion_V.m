@@ -19,7 +19,8 @@ plot(V_diff_3, V_4V,'k.');
 axis([-.35 .35 .7 3.2])
 xlabel 'V_{dm} (V)'
 ylabel 'V (V)'
-title('Common Node Voltage Sweeping V_{dm}, Strong Inversion', 'fontsize',20)
+title('Common Node Voltage Sweeping V_{dm}, Strong Inversion', 'fontsize',18)
 legend('V_2=2V','V_2=3V','V_2=4V','location','northwest')
 
 print '-depsc' plot_strong_v
+saveas(gcf, 'plot_strong_v.png')
