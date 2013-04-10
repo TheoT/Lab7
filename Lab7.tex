@@ -14,7 +14,7 @@
 \maketitle
 In this lab, we studied the MOS differential pair. This circuit is useful because it has a large response for small differences between its input voltages, which is why it is used in op-amps.
 \section*{Experiment 1: Differential Pair Current–Voltage Characteristics}
-In this experiment, we examined the current-voltage characteristics for different values of the common-mode input, while sweeping the difference between $V_1$ and $V_2$. We also took measurements for different levels of bias current. The schematic we used to construct this circuit is shown in figure \ref{schem}. 
+In this experiment, we examined the current-voltage characteristics for different values of the common-mode input, while sweepingthe differential-mode input. We also took measurements for two different levels of bias current, one where the bias transistor is below saturation and one where it is above. The schematic we used to construct this circuit is shown in figure \ref{schem}. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.3]{diffSchem.png}
@@ -23,7 +23,7 @@ In this experiment, we examined the current-voltage characteristics for differen
 \end{figure}
 
 \subsubsection*{Weakly Inverted Bias Transistor}
-To examine the current-voltage characteristic for low bias current levels, we set $V_b$ below threshold but kept the bias transistor saturated. This set the bias current low, which resulted in low values for $I_1$ and $I_2$ (we know this from KCL: $I_1+I_2=I_b$). We swept the difference between $V_1$ and $V_2$ by sweeping $V_1$ from $.3V$ below $V_2$ to $.3V$ above $V_2$. We measured the output currents $I_1$ and $I_2$ and calculated their sum and difference. We did this for several values of the common mode input voltage ($2V,3V,4V$). The plot is shown in figure \ref{weak}.\\
+To examine the current-voltage characteristic for low bias current levels, we set $V_b$ below threshold but kept the bias transistor saturated. We used a value of .55 V, knowing that the bias transistor's threshold voltage is around .6 V.  This set the bias current low (the single microamp range), which resulted in low values for $I_1$ and $I_2$ (we know this from KCL: $I_1+I_2=I_b$). We swept the difference between $V_1$ and $V_2$ by sweeping $V_1$ from $.3V$ below $V_2$ to $.3V$ above $V_2$. We measured the output currents $I_1$ and $I_2$ and calculated their sum and difference. We did this for several values of the common mode input voltage ($2V,3V,4V$). As we alluded to in the prelab, we chose those three voltages such that the common node voltage always allowed the bias transistor to remain in saturation.  The plot is shown in figure \ref{weak}.\\
 
 Theoretically, we know that the sum of $I_1$ and $I_2$ should be constant because $I_b$ is set by the bias transistor. This is confirmed in the plot. We also see that when $V_1$ is more than a tenth of a volt above $V_2$, $I_1 \approx I_b$ and $I_2 \approx 0$. Similarly, when $V_1$ is more than a tenth of a volt below $V_2$, $I_2 \approx I_b$ and $I_1 \approx 0$. We showed this in the prelab assignment. Our experimental data confirms this relationship. We also see that when $V_1=V_2$, $I_1=I_2$.\\
 
@@ -49,8 +49,8 @@ $V{CM}$ & $G_{DM}$ \\
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.8]{currents_weak.eps}
-\label{weak}
 \caption{Our current measurements when the bias transistor gate voltage below threshold.}
+\label{weak}
 \end{figure}
 
 Next we measured the common node voltage, $V$. From the prelab, we know that: \[V= \kappa (max(V_1,V_2)-V_b)\]
@@ -59,8 +59,8 @@ Figure \ref{weakV} shows our experimental findings. At the beginning of our swee
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.7]{plot_weak_v.eps}
-\label{weakV}
 \caption{The common node voltage in response to a sweep of $V_1$}
+\label{weakV}
 \end{figure}
 
 \subsubsection*{Strongly Inverted Bias Transistor}
@@ -70,8 +70,8 @@ We then put $V_b$ above threshold so that the bias transistor was in strong inve
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.8]{currents_strong.eps}
-\label{strong}
 \caption{Our current measurements when the bias transistor gate voltage above threshold.}
+\label{strong}
 \end{figure}
 
 We calculated the incremental differential mode transconductance gain when the bias transistor was in strong inversion. The results are shown in the table below. Note that $V_{CM}$ does not significantly change these values.
@@ -93,8 +93,8 @@ We also examined the common node voltage. The result is very similar to the weak
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.7]{plot_strong_v.eps}
-\label{strongV}
 \caption{The common node voltage in response to a sweep of $V_1$}
+\label{strongV}
 \end{figure}
 
 
