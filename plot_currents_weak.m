@@ -51,5 +51,5 @@ title('I_1 and I_2 With Weakly Inverted Bias Transistor','FontSize',14);
 xlabel('V_{DM}','FontSize',14);
 ylabel('I','FontSize',14)
 
-print '-depsc' currents_strong
+print '-depsc' currents_weak
 saveas(gcf,'currents_weak.png')
