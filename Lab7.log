@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.23)  10 APR 2013 15:24
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.23)  10 APR 2013 16:47
 entering extended mode
 **C:/Users/Theo/Documents/GitHub/Lab7/Lab7.tex
 (C:/Users/Theo/Documents/GitHub/Lab7/Lab7.tex
@@ -442,9 +442,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: diffSchem.png Graphic file (type png)
  <use diffSchem.png>
 Package pdftex.def Info: diffSchem.png used on input line 20.
-(pdftex.def)             Requested size: 296.30174pt x 273.71777pt.
+(pdftex.def)             Requested size: 222.23196pt x 205.29355pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
@@ -452,17 +457,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Theo/Documents/G
 itHub/Lab7/diffSchem.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
@@ -474,21 +479,16 @@ Package epstopdf Info: Source file: <currents_weak.eps>
 (epstopdf)                    size: 160685 bytes
 (epstopdf)             Command: <epstopdf --outfile=currents_weak-eps-converted
 -to.pdf currents_weak.eps>
-(epstopdf)             \includegraphics on input line 36.
+(epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
-<currents_weak-eps-converted-to.pdf, id=16, 500.87125pt x 425.59pt>
+<currents_weak-eps-converted-to.pdf, id=17, 500.87125pt x 425.59pt>
 File: currents_weak-eps-converted-to.pdf Graphic file (type pdf)
 
 <use currents_weak-eps-converted-to.pdf>
 Package pdftex.def Info: currents_weak-eps-converted-to.pdf used on input line 
-36.
-(pdftex.def)             Requested size: 475.82497pt x 404.3082pt.
-
-Overfull \hbox (6.06995pt too wide) in paragraph at lines 36--38
- [][] 
- []
-
-[2]
+51.
+(pdftex.def)             Requested size: 400.69753pt x 340.47244pt.
+ [2 <C:/Users/Theo/Documents/GitHub/Lab7/currents_weak-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <plot_weak_v.eps>
 (epstopdf)                    date: 2013-04-10 13:33:17
 (epstopdf)                    size: 28457 bytes
@@ -497,16 +497,21 @@ Package epstopdf Info: Source file: <plot_weak_v.eps>
 (epstopdf)                    size: 47036 bytes
 (epstopdf)             Command: <epstopdf --outfile=plot_weak_v-eps-converted-t
 o.pdf plot_weak_v.eps>
-(epstopdf)             \includegraphics on input line 46.
+(epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
- <plot_weak_v-eps-converted-to.pdf, id=21, 493.845pt x 426.59375pt>
+
+<plot_weak_v-eps-converted-to.pdf, id=26, 493.845pt x 426.59375pt>
 File: plot_weak_v-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plot_weak_v-eps-converted-to.pdf>
-Package pdftex.def Info: plot_weak_v-eps-converted-to.pdf used on input line 46
+Package pdftex.def Info: plot_weak_v-eps-converted-to.pdf used on input line 61
 .
 (pdftex.def)             Requested size: 345.68913pt x 298.61357pt.
- [3 <C:/Users/Theo/Documents/GitHub/Lab7/currents_weak-eps-converted-to.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
 Package epstopdf Info: Source file: <currents_strong.eps>
 (epstopdf)                    date: 2013-04-10 13:42:45
 (epstopdf)                    size: 249654 bytes
@@ -515,22 +520,16 @@ Package epstopdf Info: Source file: <currents_strong.eps>
 (epstopdf)                    size: 213720 bytes
 (epstopdf)             Command: <epstopdf --outfile=currents_strong-eps-convert
 ed-to.pdf currents_strong.eps>
-(epstopdf)             \includegraphics on input line 57.
+(epstopdf)             \includegraphics on input line 72.
 Package epstopdf Info: Output file is already uptodate.
-
-<currents_strong-eps-converted-to.pdf, id=29, 496.85625pt x 425.59pt>
+<currents_strong-eps-converted-to.pdf, id=27, 496.85625pt x 425.59pt>
 File: currents_strong-eps-converted-to.pdf Graphic file (type pdf)
 
 <use currents_strong-eps-converted-to.pdf>
 Package pdftex.def Info: currents_strong-eps-converted-to.pdf used on input lin
-e 57.
-(pdftex.def)             Requested size: 472.01076pt x 404.3082pt.
-
-Overfull \hbox (2.25574pt too wide) in paragraph at lines 57--59
- [][] 
- []
-
-[4 <C:/Users/Theo/Documents/GitHub/Lab7/plot_weak_v-eps-converted-to.pdf>]
+e 72.
+(pdftex.def)             Requested size: 397.48553pt x 340.47244pt.
+ [3 <C:/Users/Theo/Documents/GitHub/Lab7/plot_weak_v-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <plot_strong_v.eps>
 (epstopdf)                    date: 2013-04-10 13:33:17
 (epstopdf)                    size: 28461 bytes
@@ -539,27 +538,27 @@ Package epstopdf Info: Source file: <plot_strong_v.eps>
 (epstopdf)                    size: 47648 bytes
 (epstopdf)             Command: <epstopdf --outfile=plot_strong_v-eps-converted
 -to.pdf plot_strong_v.eps>
-(epstopdf)             \includegraphics on input line 64.
+(epstopdf)             \includegraphics on input line 95.
 Package epstopdf Info: Output file is already uptodate.
 
-<plot_strong_v-eps-converted-to.pdf, id=39, 492.84125pt x 426.59375pt>
+<plot_strong_v-eps-converted-to.pdf, id=37, 492.84125pt x 426.59375pt>
 File: plot_strong_v-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plot_strong_v-eps-converted-to.pdf>
 Package pdftex.def Info: plot_strong_v-eps-converted-to.pdf used on input line 
-64.
+95.
 (pdftex.def)             Requested size: 344.98651pt x 298.61357pt.
- [5 <C:/Users/Theo/Documents/GitHub/Lab7/currents_strong-eps-converted-to.pdf>]
- [6 <C:/Users/Theo/Documents/GitHub/Lab7/plot_strong_v-eps-converted-to.pdf>]
+ [4 <C:/Users/Theo/Documents/GitHub/Lab7/currents_strong-eps-converted-to.pdf>]
+ [5 <C:/Users/Theo/Documents/GitHub/Lab7/plot_strong_v-eps-converted-to.pdf>]
 (C:\Users\Theo\Documents\GitHub\Lab7\Lab7.aux) ) 
 Here is how much of TeX's memory you used:
  2327 strings out of 493921
  32960 string characters out of 3144879
- 95499 words of memory out of 3000000
+ 96499 words of memory out of 3000000
  5588 multiletter control sequences out of 15000+200000
  7934 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,7n,32p,667b,215s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,32p,767b,215s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/
@@ -570,10 +569,11 @@ pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmti10.pfb>
-Output written on Lab7.pdf (6 pages, 602174 bytes).
+msfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmti10.pfb>
+Output written on Lab7.pdf (5 pages, 613878 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,12 +9,14 @@ plot(V_src,I1,'or');
 plot(V_src,I1a-I1,'ok');
 plot(V_src,I1a+I1,'og'); 
 I_diff=I1a-I1;
-inds=intersect(find(.05>V_src),find(V_src>-.05));
+cutoff=.1;
+inds=intersect(find(cutoff>V_src),find(V_src>-cutoff));
 p=polyfit(V_src(inds),I_diff(inds),1);
 'Transconductance Gain 2V'
 p(1)
 
 clear all
+cutoff=.1;
 load('V=3V_I1_meas_strong.mat');
 I1a=I1;
 load('V=3V_I2_meas_strong.mat');
@@ -24,12 +26,13 @@ plot(V_src,I1,'.r');
 plot(V_src,I1a-I1,'.k');
 plot(V_src,I1a+I1,'.g'); 
 I_diff=I1a-I1;
-inds=intersect(find(.05>V_src),find(V_src>-.05));
+inds=intersect(find(cutoff>V_src),find(V_src>-cutoff));
 p=polyfit(V_src(inds),I_diff(inds),1);
 'Transconductance Gain 3V'
 p(1)
 
 clear all
+cutoff=.1;
 load('V=4V_I1_meas_strong.mat');
 I1a=I1;
 load('V=4V_I2_meas_strong.mat');
@@ -40,7 +43,7 @@ plot(V_src,I1a-I1,'*k');
 plot(V_src,I1a+I1,'*g'); 
 
 I_diff=I1a-I1;
-inds=intersect(find(.05>V_src),find(V_src>-.05));
+inds=intersect(find(cutoff>V_src),find(V_src>-cutoff));
 p=polyfit(V_src(inds),I_diff(inds),1);
 'Transconductance Gain 4V'
 p(1)
@@ -51,5 +54,5 @@ title('I_1 and I_2 With Strongly Inverted Bias Transistor','FontSize',14);
 xlabel('V_{DM}','FontSize',14);
 ylabel('I','FontSize',14)
 
-print '-depsc' currents_strong
-saveas(gcf,'currents_strong.png')
+% print '-depsc' currents_strong
+% saveas(gcf,'currents_strong.png')
