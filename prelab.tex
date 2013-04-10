@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+
+\title{Prelab Lab 7}
+\author{Theo Thompson}
+\date{April 5, 2013}
+
+\renewcommand*\thesubsection{(\alph{subsection})}
+\renewcommand*\thesection{\arabic{section}.}
+
+\newcommand{\nm}{\emph{n}MOS }
+\newcommand{\pmo}{\emph{p}MOS }
+
+\begin{document}
+\maketitle
+
+\section{}
+\subsection{}
+From KCL, we get \[I_1+I_2=I_b\]
+\subsection{}
+If $V_1=V_2=V_{cm}$, then $I_1=I_2$ because the transistors are well matched and under the same conditions. Since $I_1+I_2=I_b$, in this situation: \[I_1=I_2=\frac{1}{2}I_b\]
+\subsection{}
+If $V_1$ exceeds $V_2$ by a tenths of a volts (hundreds of millivolts), the increased gate voltage will cause an increase in $I_1$. When the transistor is in weak inversion, a hundreds of millivolts swing in gate voltage will result in much more current being passed. To be more precise, we expect to see a decade more current for each $60mv$ increase in $V_{GS}$. In strong inversion we can't put a number on it, but a hundreds of millivolts swing will still result in much more channel current. The strong inversion model shows that the relationship is quadratic, so we expect to see much more current for each tenth of a volt that we add to the gate. Given these assumptions, we can say that $I_1$ will increase by decades of current, simultaneously dropping $I_2$ (KCL must still be satisfied, so an increase in $I_1$ causes a drop in $I_2$). Thus, it is safe to say that $I_2 \approx 0$, and $I_1 \approx I_b$.\\
+
+Assuming that $M_b$ is saturated, we can substitute EKV models for $I_b$ and $I_1$ to get: \[I_slog^2(1+e^{\frac{\kappa(V_{b}-V_{T0})}{2U_T}})=I_slog^2(1+e^{\frac{\kappa(V_{1}-V_{T0})-V}{2U_T}})\]
+After simplifying, we have: \[V=\kappa(V_1-V_b)\]
+\subsection{}
+If $V_2$ exceeds $V_1$ by several hundred millivolts, we can say that $I_1 \approx 0$ and $I_2 \approx I_b$. Justification for this is the same as above: increasing $V_2$ by hundreds of millivolts will set $I_2$ far above $I_1$, regardless of the inversion level (this is a very similar situation as part (c), so I will not elaborate further).\\
+
+Assuming that $M_b$ is saturated, we can substitute EKV models for $I_b$ and $I_2$ to get: \[I_slog^2(1+e^{\frac{\kappa(V_{b}-V_{T0})}{2U_T}})=I_slog^2(1+e^{\frac{\kappa(V_{2}-V_{T0})-V}{2U_T}})\]
+After simplifying, we have: \[V=\kappa(V_2-V_b)\]
+\subsection{}
+The approximate relationship between $V$, $V_1$, $V_2$, and $V_b$ depends on the inversion level of all three transistors. 
+
+To derive the relationship in weak inversion, we begin with the EKV models for each transistor and solve for the common-source node voltage. This is shown in the Differential Pair handout given in class, so i will simply restate the final expression here: \[V=U_Tlog(e^{\kappa V_1/U_T}+e^{\kappa V_2/U_T})-\kappa V_b\] 
+If $V_1$ exceeds $V_2$ by a few $U_T$, the second term becomes insignificant. After simplifying, we have: \[V=\kappa(V_1-V_b)\]
+Similarly, if $V_2$ exceeds $V_1$ by a few $U_T$, the first term becomes insignificant. We get: \[V=\kappa(V_2-V_b)\]
+Combining the last two expressions, we can say that \[V \approx \kappa(max(V_1,V_2)-V_b)\]
+
+For strong inversion, we can substitute the strong inversion current model into the KCL relationship. This leaves us with a quadratic equation, which is solved in the handout. After simplifying, we get \[V=\frac{\kappa}{2}(V_1+V_2-2V_{T0}-\sqrt{2(V_b-V_{T0})^2-(V_1-V_2)^2})\]\\
+For $M_b$ to remain in saturation, $V>V_{DSSat}$. Substituting for $V$, we have: \[\kappa(max(V_1,V_2)-V_b)>V_{DSSat}\]
+Solving for $max(V_1,V_2)$: \[max(V_1,V_2)>\frac{V_{DSSat}}{\kappa}+V_b\]
+
+\section{}
+\subsection{}
+From KCL: \[I_b=I_1+I_2\]
+\subsection{}
+If $V_1=V_2=V_{cm}$, then $I_1=I_2$ because the transistors are well matched and under the same conditions. Since $I_1+I_2=I_b$, in this situation: \[I_1=I_2=\frac{1}{2}I_b\]
+\subsection{}
+If $V_1$ exceeds $V_2$ by a tenths of a volts (hundreds of millivolts), the increased gate voltage will cause a decrease in $I_1$. When the transistor is in weak inversion, a hundreds of millivolts swing in gate voltage will result in much less current being passed. To be more precise, we expect to see a decade less current for each $60mv$ increase in $V_{GS}$. In strong inversion we can't put a number on it, but a hundreds of millivolts swing will still result in much less channel current. The strong inversion model shows that the relationship is quadratic, so we expect to see much less current for each tenth of a volt that we add to the gate. Given these assumptions, we can say that $I_1$ will decrease by decades of current, simultaneously increasing $I_2$ (KCL must still be satisfied, so a decrease in $I_1$ causes an increase $I_2$). Thus, it is safe to say that $I_1 \approx 0$, and $I_2 \approx I_b$.\\
+
+Assuming that $M_b$ is saturated, we can substitute EKV models for $I_b$ and $I_2$ to get: \[I_slog^2(1+e^{\frac{\kappa(V_{dd}-V_{b}-V_{T0})}{2U_T}})=I_slog^2(1+e^{\frac{\kappa(V_{dd}-V_{2}-V_{T0})-V_{dd}+V}{2U_T}})\]
+After simplifying, we have: \[V=\kappa(V_2-V_b)+V_{dd}\]
+\subsection{}
+If $V_2$ exceeds $V_1$ by several hundred millivolts, we can say that $I_2 \approx 0$ and $I_1 \approx I_b$. Justification for this is the same as above: increasing $V_2$ by hundreds of millivolts will set $I_2$ far below $I_1$, regardless of the inversion level (this is a very similar situation as part (c), so I will not elaborate further).\\
+
+Assuming that $M_b$ is saturated, we can substitute EKV models for $I_b$ and $I_1$ to get: \[I_slog^2(1+e^{\frac{\kappa(V_{dd}-V_{b}-V_{T0})}{2U_T}})=I_slog^2(1+e^{\frac{\kappa(V_{dd}-V_{1}-V_{T0})-V_{dd}+V}{2U_T}})\]
+After simplifying, we have: \[V=\kappa(V_1-V_b)+V_{dd}\]
+\subsection{}
+The approximate relationship between $V$, $V_1$, $V_2$, and $V_b$ depends on the inversion level of all three transistors. 
+
+To derive the relationship in weak inversion, we begin with the EKV models for each transistor and solve for the common-source node voltage. This is shown in the Differential Pair handout given in class, so i will simply restate the final expression here (adapted for pMOS transistor): \[V=U_Tlog(e^{\kappa (V_{dd}-V_1)/U_T}+e^{\kappa (V_{dd}-V_2)/U_T})-\kappa (V_{dd}-V_b)\]\[=e^{\kappa V_{dd}/U_T}U_T~log(e^{\kappa (V_1)/U_T}+e^{\kappa (V_2)/U_T})-\kappa (V_{dd}-V_b)\] 
+If $V_1$ exceeds $V_2$ by a few $U_T$, the first term becomes insignificant. After simplifying, we have: \[V=V_{dd}-\kappa(V_2-V_b)\]
+Similarly, if $V_2$ exceeds $V_1$ by a few $U_T$, the second term becomes insignificant. We get: \[V=V_{dd}-\kappa(V_1-V_b)\]
+Combining the last two expressions, we can say that \[V \approx V_{dd}- \kappa(min(V_1,V_2)-V_b)\]
+
+For strong inversion, we can substitute the strong inversion current model into the KCL relationship. This leaves us with a quadratic equation, which is solved in the handout. After simplifying, we get \[V=V_{dd}-\frac{\kappa}{2}(V_1+V_2-2V_{T0}-\sqrt{2(V_b-V_{T0})^2-(V_1-V_2)^2})\]\\
+For $M_b$ to remain in saturation, $V<V_{dd}-V_{DSSat}$. Substituting for $V$, we have: \[V_{dd}-\kappa(min(V_1,V_2)-V_b)<V_{dd}-V_{DSSat}\]
+Solving for $min(V_1,V_2)$: \[min(V_1,V_2)>\frac{V_{DSSat}}{\kappa}+V_b\]
+\end{document}
