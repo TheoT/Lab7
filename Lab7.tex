@@ -31,12 +31,12 @@ We know that since the bias transistor is in weak inversion, the other two trans
 
 Changing the common mode input voltage does not have a significant effect on the output currents. The difference between $V_1$ and $V_2$ is what changes the output.\\
 
-To calculate the incremental differential mode transconductance gain, we fit a line to the difference between $I_1$ and $I_2$. The results are shown in the table below. Note that $V_{CM}$ does not significantly change these values.
+To calculate the incremental differential mode transconductance gain, we fit a line to the difference between $I_1$ and $I_2$ for small values of $V_{dm}$ and extracted the slope. The results are shown in the table below. Note that $V_{CM}$ does not significantly change these values - the transconductance gain is not affected by the average input voltage!
 \\
 \begin{center}
 \begin{tabular} {|c|c|}
 \hline
-$V{CM}$ & $G_{DM}$ \\ 
+$V{CM}$ (Volts) & $G_{DM}$ (Mhos) \\ 
 \hline
 2V & $1.76 *10^{-5}$ \\
 3V & $1.78 *10^{-5}$ \\
@@ -54,7 +54,7 @@ $V{CM}$ & $G_{DM}$ \\
 \end{figure}
 
 Next we measured the common node voltage, $V$. From the prelab, we know that: \[V= \kappa (max(V_1,V_2)-V_b)\]
-Figure \ref{weakV} shows our experimental findings. At the beginning of our sweep, $V_1<V_2$. Therefore $V=\kappa(V_2-V_b)$. Since we held $V_2$ constant, we know that $V$ should also be constant. As we sweep $V_1$ higher than $V_2$, $V=\kappa(V_1-V_b)$. The common node voltage then becomes linear because $V_1$ is steadily increasing from the sweep. 
+Figure \ref{weakV} shows our experimental findings. At the beginning of our sweep, $V_1<V_2$. Therefore $V=\kappa(V_2-V_b)$. Since we held $V_2$ constant, we know that $V$ should also be constant. As we sweep $V_1$ higher than $V_2$, $V=\kappa(V_1-V_b)$. The common node voltage then becomes linear because $V_1$ is steadily increasing from the sweep. In between, there is a small nonlinear transition region, but because the current response is exponential, this region is small.
 
 \begin{figure}[H]
 \centering
@@ -79,11 +79,11 @@ We calculated the incremental differential mode transconductance gain when the b
 \begin{center}
 \begin{tabular} {|c|c|}
 \hline
-$V{CM}$ & $G_{DM}$ \\ 
+$V{CM}$ (Volts) & $G_{DM}$ (Mhos) \\ 
 \hline
-2V  & $1.77 *10^{-4}$ \\
-3V & $1.83 *10^{-4}$ \\
-4V & $1.87 *10^{-4}$ \\
+2  & $1.77 *10^{-4}$ \\
+3 & $1.83 *10^{-4}$ \\
+4 & $1.87 *10^{-4}$ \\
 \hline
 \end{tabular}
 \end{center}
@@ -97,6 +97,11 @@ We also examined the common node voltage. The result is very similar to the weak
 \label{strongV}
 \end{figure}
 
+For negative $V_{dm}$, the common node voltage holds steady at $V_2$.  For positive $V_{dm}$, the voltage slowly transitions to a linear function of $V_{1}$.  The transition region for the strongly inverted differential pair is significantly slower than that of the weakly inverted pair.  That is because the current response of the circuit is quadratic in strong inversion, so it takes longer for either transistor to dominate the other than in weak inversion, which is governed by an exponential.  This is because exponentials grow faster than quadratics.
+
+\section*{Conclusion}
+
+The differential pair is an interesting circuit because the current difference responds much more quickly to change in input in weak inversion than in strong inversion - which is counter-intuitive.
 
 
 \end{document}
